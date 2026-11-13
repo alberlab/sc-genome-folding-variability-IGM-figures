@@ -15,7 +15,7 @@ occupancy 0.6, 200 kb, 1000 diploid structures each. Defaults = what the manuscr
 ## Quick start (macOS or Linux, ~1 min after the environment is installed)
 
 ```bash
-git clone git@github.com:WYeast/sc-genome-folding-variability-IGM-figures.git
+git clone https://github.com/alberlab/sc-genome-folding-variability-IGM-figures.git
 cd sc-genome-folding-variability-IGM-figures
 conda env create -f environment.yml          # env "sc-folding-figures" (conda-forge; python 3.13, pinned versions)
 conda activate sc-folding-figures
