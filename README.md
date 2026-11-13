@@ -1,7 +1,7 @@
 # Model (IGM) panels of the single-cell genome-folding variability manuscript — figure code
 
-> **Private repository until publication.** It contains unpublished data tables (incl. the plate- and droplet-based
-> scHi-C cis/total annotation tables in `data/schic/`). Do not make it public or redistribute before the paper is out.
+> The plate- and droplet-based scHi-C cis/total annotation tables in `data/schic/` are the manuscript's Supplementary
+> Tables 2 and 3; please cite the paper when using them.
 
 This repository regenerates every **statistical plot of the IGM-model panels** of the main figures (Fig. 2–5) and Extended
 Data figures (ExtFig. 2, 4, 5, 6), together with the **source-data table** behind each panel, from small pre-computed
