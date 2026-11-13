@@ -1,0 +1,9 @@
+name: extfig6-model
+channels:
+  - conda-forge
+dependencies:
+  - scipy=1.18.0
+  - numpy=2.5.1
+  - python=3.13
+  - matplotlib=3.11.1
+  - pandas=3.0.5

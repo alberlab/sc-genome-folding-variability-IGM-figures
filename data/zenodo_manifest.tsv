@@ -1,0 +1,69 @@
+path	bytes	md5	used_by
+ExtFig2/data/structures/h1_occ06_extfig2c_locale_ENVv2_cmm_pdb.tar.gz	7041158	6d228245c565bc1130a5a4bdcb4eed5b	ExtFig2/run_chimerax.sh (ExtFig2c)
+ExtFig2/output/figures/ExtFig2c/h1 NL-act.cxs	1715938	e195d5c3085daf3de18a6dd9663e9c7d	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+ExtFig2/output/figures/ExtFig2c/h1 NL-act.png	676899	370c17ec173cf0cf0d0a6319d53fd487	published render
+ExtFig2/output/figures/ExtFig2c/h1 NL-rep.cxs	1717247	c15a82b8e757ba38f6de5dcbff4f50d2	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+ExtFig2/output/figures/ExtFig2c/h1 NL-rep.png	815504	54c17fa72256645272749a8d2548e7af	published render
+ExtFig2/output/figures/ExtFig2c/h1 env.cxs	1689556	8280b0b2a3adb4d5171b52856fb55ae8	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+ExtFig2/output/figures/ExtFig2c/h1 env.png	1034572	54a712d39adba94f037e546443c60610	published render
+ExtFig2/output/figures/ExtFig2c/h1 nuc.cxs	1650553	e64521fc7b4a334cf2fd9dacd5ca3045	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+ExtFig2/output/figures/ExtFig2c/h1 nuc.png	371614	2e623afa4503044bb25256caefb23b4e	published render
+ExtFig2/output/figures/ExtFig2c/h1 spe.cxs	1668176	19e2b5cf5c54b99dbc67869136eb3335	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+ExtFig2/output/figures/ExtFig2c/h1 spe.png	640531	c2b8d1d78fc1b25774ff932dbac2ce76	published render
+Fig4/data/structures/DE_occ06_cmm_pdb_by_chromosome.tar.gz	6821362	062b94427c83be919f9caff6b7638a59	Fig4/run_chimerax.sh (inputs of the Fig4a/e/i sessions; unpack: Fig4/extract_structures.sh)
+Fig4/data/structures/DE_occ06_cmm_pdb_by_shannon.tar.gz	7952784	b0f5e65f392e52f717380959e0196767	Fig4/run_chimerax.sh (inputs of the Fig4a/e/i sessions; unpack: Fig4/extract_structures.sh)
+Fig4/data/structures/HB_occ06_cmm_pdb_by_chromosome.tar.gz	6775686	ae110648dd0b7ba72cbd7c0e784fb9cb	Fig4/run_chimerax.sh (inputs of the Fig4a/e/i sessions; unpack: Fig4/extract_structures.sh)
+Fig4/data/structures/HB_occ06_cmm_pdb_by_shannon.tar.gz	7769636	1923dca3cca77a2f26b8a1dcd63fd978	Fig4/run_chimerax.sh (inputs of the Fig4a/e/i sessions; unpack: Fig4/extract_structures.sh)
+Fig4/data/structures/h1_occ06_cmm_pdb_by_chromosome.tar.gz	6784285	c1e01b8d1729947bcc0eec0aef80f35d	Fig4/run_chimerax.sh (inputs of the Fig4a/e/i sessions; unpack: Fig4/extract_structures.sh)
+Fig4/data/structures/h1_occ06_cmm_pdb_by_shannon.tar.gz	8002749	5b2355d0e87898a2828e0d67f82cbde8	Fig4/run_chimerax.sh (inputs of the Fig4a/e/i sessions; unpack: Fig4/extract_structures.sh)
+Fig4/data/structures/mHEP_occ06_cmm_pdb_by_chromosome.tar.gz	6807049	29050e9d0c9bc6032adc5c6299256e96	Fig4/run_chimerax.sh (inputs of the Fig4a/e/i sessions; unpack: Fig4/extract_structures.sh)
+Fig4/data/structures/mHEP_occ06_cmm_pdb_by_shannon.tar.gz	7847508	a2574c0788ba3c831b19d23d936bdb99	Fig4/run_chimerax.sh (inputs of the Fig4a/e/i sessions; unpack: Fig4/extract_structures.sh)
+Fig4/output/figures/Fig4a/DE halfview.cxs	1625873	31ee88ebbd0205bc2d5bfca628bf3649	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4a/DE halfview.png	1858549	78aa478e785009d6b53811c008061653	published render
+Fig4/output/figures/Fig4a/HB halfview.cxs	1610146	760faa4b17d2c9f0b55ea4f823165b74	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4a/HB halfview.png	1462493	787275d7a7c59b798b593b4e77be2510	published render
+Fig4/output/figures/Fig4a/h1 halfview.cxs	1607034	39dda2ca519cca76b7f8c9ef75a3f85d	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4a/h1 halfview.png	1202889	39ce7d715cfaf889a1a360e57e165658	published render
+Fig4/output/figures/Fig4a/mHEP halfview.cxs	1629917	44c26e234b28de7e0413a30c3c62e057	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4a/mHEP halfview.png	2045201	1a6f92ce957d2b39915ba20cf8c4ae3d	published render
+Fig4/output/figures/Fig4e/DE chr11.cxs	73442	39fcc362204afc69fe161d593a3a820f	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4e/DE chr11.png	402355	56ff6576e568d314c7bd7e10a99339a9	published render
+Fig4/output/figures/Fig4e/HB chr11.cxs	73374	3400e0e2170bc38e9e91b1b21fa8b03b	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4e/HB chr11.png	338287	ed47d824a02aa03a9f0d1bc7e5bfae72	published render
+Fig4/output/figures/Fig4e/h1 chr.png	292214	9f53535a961f329c1c21cab3ca6de59a	published render
+Fig4/output/figures/Fig4e/h1 chr11.cxs	142253	1582e8ded53df5da958fc5e509e2f55a	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4e/mHEP chr11.cxs	73339	27fd07084310d14b5b27b870852761dc	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4e/mHEP chr11.png	382409	091201390b3a5cc3cdf1a1c1570221dc	published render
+Fig4/output/figures/Fig4i/DE shannon.cxs	5496541	d2f81bc73b79d8f7dc3273d0d965894d	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4i/DE shannon.png	1980985	72220e0586fe854292a794061f23ff95	published render
+Fig4/output/figures/Fig4i/DE_nucleus_shell_pores.mrc	43251024	c667fff26bc011af04625f3dc211c5c1	nuclear envelope map, opened by Fig4i/Fig5a/Fig5b/ExtFig2c scenes
+Fig4/output/figures/Fig4i/HB shannon.cxs	4765247	3a67c9f8d493f3d560d3e50fca92f32c	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4i/HB shannon.png	1424456	80cf9700e7f71a2c9f0bb4525b6cd725	published render
+Fig4/output/figures/Fig4i/HB_nucleus_shell_pores.mrc	25755424	075ccd98cfb49d9f3c526d2ff5e39edd	nuclear envelope map, opened by Fig4i/Fig5a/Fig5b/ExtFig2c scenes
+Fig4/output/figures/Fig4i/h1 shannon.cxs	4482314	4ed3d2bfd32120d36833b9bcdc30e3a6	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4i/h1 shannon.png	955092	b1b06a6f4353c684e766a5243074bd96	published render
+Fig4/output/figures/Fig4i/h1_nucleus_shell_pores.mrc	10621024	83ad02a11f9546302966eac4068c8383	nuclear envelope map, opened by Fig4i/Fig5a/Fig5b/ExtFig2c scenes
+Fig4/output/figures/Fig4i/mHEP shannon.cxs	5695671	053df908e0bc4237c1748be8f1d16635	ChimeraX session = scene recipe, re-rendered by Fig4/run_chimerax.sh (required)
+Fig4/output/figures/Fig4i/mHEP shannon.png	2124668	ab8d41317bdd5a8d078e2aa705171849	published render
+Fig4/output/figures/Fig4i/mHEP_nucleus_shell_pores.mrc	55057424	efd6e8d4a237ba1d70bb0efcd72a69af	nuclear envelope map, opened by Fig4i/Fig5a/Fig5b/ExtFig2c scenes
+Fig5/data/structures/DE_occ06_fig5_SD_entropy_ENVv2_cmm_pdb.tar.gz	17069926	da2b472577a97b0070ab3f543c5e1f8f	Fig5/run_chimerax.sh (Fig5a/5b)
+Fig5/data/structures/HB_occ06_fig5_SD_entropy_ENVv2_cmm_pdb.tar.gz	16635597	6ffff3a0a5fe63f5d571e3010b62d9df	Fig5/run_chimerax.sh (Fig5a/5b)
+Fig5/data/structures/h1_occ06_fig5_SD_entropy_ENVv2_cmm_pdb.tar.gz	16932189	d8496da81bee1c470cd673dc021131b5	Fig5/run_chimerax.sh (Fig5a/5b)
+Fig5/data/structures/mHEP_occ06_fig5_SD_entropy_ENVv2_cmm_pdb.tar.gz	16851188	d116d1af31aa86d8e898a69a5ae7e629	Fig5/run_chimerax.sh (Fig5a/5b)
+Fig5/output/figures/Fig5a/DE SD.cxs	1968435	4a493164f611e657e2ed5474596b7176	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+Fig5/output/figures/Fig5a/DE SD.png	1789834	cb0113139d634ffb8049fd46562cbe5b	published render
+Fig5/output/figures/Fig5a/HB SD.cxs	1935296	0a6b0dd500596f9ff2e210dac6b79925	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+Fig5/output/figures/Fig5a/HB SD.png	1272919	42208a8498e27ce06ecfa6ea454bb9ac	published render
+Fig5/output/figures/Fig5a/h1 SD.cxs	1959429	dc87b06fb0a2202f231bd314e7634975	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+Fig5/output/figures/Fig5a/h1 SD.png	797238	8fb71bd2a13acf9d875654833e93437b	published render
+Fig5/output/figures/Fig5a/mHEP SD.cxs	1962189	cb477b16c7780f0dfa4c6dc576efe418	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+Fig5/output/figures/Fig5a/mHEP SD.png	2114645	d8dd14e873efacc4306de46d22ae5cb3	published render
+Fig5/output/figures/Fig5a/speckle legend h1.png	137670	767cea493870c7edf1e47b97731c1f2a	published render
+Fig5/output/figures/Fig5b/DE entropy.cxs	1967689	8219ad255c57f1e203df4c64cae45ea6	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+Fig5/output/figures/Fig5b/DE entropy.png	1849988	4daa79802b6777dbcb66b13509f068fa	published render
+Fig5/output/figures/Fig5b/HB entropy.cxs	1953801	e51fac866464b59ed9fb5c088d05b249	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+Fig5/output/figures/Fig5b/HB entropy.png	1352287	1108587ceb20ac8fc003d6e48898ca48	published render
+Fig5/output/figures/Fig5b/h1 entropy.cxs	1956548	bef2a2d73a34704ddeea34d8a8f754ac	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+Fig5/output/figures/Fig5b/h1 entropy.png	852850	c37cb5eceea61bf328aa7cf07b2d86ff	published render
+Fig5/output/figures/Fig5b/mHEP entropy.cxs	1959703	bfaa0db4f5fcbc47043a01295252f599	ChimeraX session written by the figure's run_chimerax.sh (reference copy)
+Fig5/output/figures/Fig5b/mHEP entropy.png	2202394	15e58c9d34eb2ad31d6b57220c6e9a22	published render
