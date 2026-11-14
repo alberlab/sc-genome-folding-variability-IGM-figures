@@ -175,7 +175,7 @@ def chr_tracks_1mb(chrom):
 
 def plot_tracks(t, spans, tracks, chrom, title, name, xlim=(-5, 140)):
     """Stacked genome tracks (1 Mb). tracks = [(column, title, y label, colour, ylim or None), ...];
-    ylim = (bottom, top) — give bottom > top to flip the axis. x axis padded to xlim, ticks only on real coordinates."""
+    ylim = (bottom, top) — give bottom > top to flip the axis; "flip" = auto range, flipped. x axis padded to xlim, ticks only on real coordinates."""
     TITLE_FS, LABEL_FS, TICK_FS = 28, 24, 20
     x = t.index.to_numpy() / 1e6
     chrom_end = t["end"].max() / 1e6
@@ -184,7 +184,9 @@ def plot_tracks(t, spans, tracks, chrom, title, name, xlim=(-5, 140)):
         for a, b in spans:
             ax.axvspan(a, b, color="lightgray", alpha=0.5, lw=0, zorder=0)
         ax.plot(x, t[c].to_numpy(float), lw=2.5, color=col)
-        if yl is not None:
+        if yl == "flip":                                              # auto range, large values at the bottom
+            ax.invert_yaxis()
+        elif yl is not None:
             ax.set_ylim(*yl)
         ax.set_title(ttl, fontsize=TITLE_FS, fontweight="bold"); ax.set_ylabel(ylab, fontsize=LABEL_FS)
         ax.grid(True, linestyle=":", lw=0.9, color="gray", alpha=0.7)

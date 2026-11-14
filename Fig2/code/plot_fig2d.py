@@ -8,7 +8,7 @@ Locale = ENV v2 (env seeds = outermost 20 % of all beads + 2.5 r).
 Outputs: output/figures/Fig2d_*, output/source_data/Fig2d_*.tsv
 """
 import numpy as np, pandas as pd, matplotlib.pyplot as plt
-from fig2_common import (P5, LOC_COLORS, LOC_DISP, V_LABEL, load_200kb, load_e1_1mb, to_1mb, spear_text, lim, save,
+from fig2_common import (TEXT_POS, P5, LOC_COLORS, LOC_DISP, V_LABEL, load_200kb, load_e1_1mb, to_1mb, spear_text, lim, save,
                          save_table)
 
 ORDER = ["spe", "act", "env", "rep"]
@@ -38,7 +38,10 @@ for g, x in zip(BOX_ORDER, data):
     stats.append(dict(panel="p1_box", group=LOC_DISP[g], n=len(x), median=np.median(x), mean=x.mean()))
 
 
-def scatter(ax, df, xcol, xlab, s, loc="lr", xl=None, dense=True):
+PEARSON = {}
+
+
+def scatter(ax, df, xcol, xlab, s, loc="lr", xl=None, dense=True, pearson=False):
     """dense = many points (200 kb): translucent, no edge, rasterised; else opaque with a thin white edge."""
     x = df[xcol].to_numpy(float); y = df.entropy_bit.to_numpy(float); ok = np.isfinite(x) & np.isfinite(y)
     for g in ["rep", "act", "env", "spe"]:                   # spe on top (smallest group)
@@ -46,7 +49,15 @@ def scatter(ax, df, xcol, xlab, s, loc="lr", xl=None, dense=True):
         if k.sum():
             ax.scatter(x[k], y[k], s=s, c=LOC_COLORS[g], alpha=0.55 if dense else 0.8, linewidths=0 if dense else 0.4,
                        edgecolor="white", rasterized=dense, label=LOC_DISP[g])
-    r, p = spear_text(ax, x[ok], y[ok], loc=loc)
+    if pearson:                                              # middle panel: Spearman + Pearson (2026-11-13)
+        from scipy.stats import spearmanr, pearsonr
+        r, p = spearmanr(x[ok], y[ok]); pr, pp = pearsonr(x[ok], y[ok]); tx, ty, ha, va = TEXT_POS[loc]
+        fmt = lambda q: f"{q:.2e}" if q > 0 else "< 1e-300"
+        ax.text(tx, ty, f"Spearman r = {r:.2f}, p = {fmt(p)}\nPearson r = {pr:.2f}, p = {fmt(pp)}\nn = {int(ok.sum())}",
+                transform=ax.transAxes, fontsize=10, ha=ha, va=va, bbox=dict(facecolor="white", alpha=0.85, edgecolor="none", pad=2))
+        PEARSON[xlab, int(ok.sum())] = (pr, pp)
+    else:
+        r, p = spear_text(ax, x[ok], y[ok], loc=loc)
     ax.set_xlim(xl if xl else lim(x[ok])); ax.set_ylim(lim(y[ok])); ax.set_xlabel(xlab); ax.set_ylabel(ENT)
     for sp in ("top", "right"):
         ax.spines[sp].set_visible(False)
@@ -62,13 +73,13 @@ def legend(ax):
 # ---- panel 2: entropy vs IQR / SD (200 kb), genome-wide and chr2 only (dot size 2.5x the 2026-10-16 version)
 S_200KB, S_1MB = 40, 75
 for v in ("sd",):                                                       # SD only (2026-11)
-    fig, ax = plt.subplots(figsize=(6.2, 5)); r, p, n = scatter(ax, d, v, V_LABEL[v], s=S_200KB); legend(ax)
+    fig, ax = plt.subplots(figsize=(6.2, 5)); r, p, n = scatter(ax, d, v, V_LABEL[v], s=S_200KB, pearson=True); legend(ax)
     fig.tight_layout(); save(fig, f"Fig2d_middle_alt_entropy_vs_{v.upper()}_genomewide")
-    stats.append(dict(panel=f"p2_entropy_vs_{v.upper()}_200kb", n=n, spearman=r, p=p))
+    stats.append(dict(panel=f"p2_entropy_vs_{v.upper()}_200kb", n=n, spearman=r, p=p, pearson=PEARSON[V_LABEL[v], n][0], pearson_p=PEARSON[V_LABEL[v], n][1]))
     c2 = d[d.chr == "chr2"].reset_index(drop=True)
-    fig, ax = plt.subplots(figsize=(6.2, 5)); r, p, n = scatter(ax, c2, v, V_LABEL[v], s=S_200KB, dense=False); legend(ax)
+    fig, ax = plt.subplots(figsize=(6.2, 5)); r, p, n = scatter(ax, c2, v, V_LABEL[v], s=S_200KB, dense=False, pearson=True); legend(ax)
     ax.set_title("chr2 (200 kb)"); fig.tight_layout(); save(fig, f"Fig2d_middle_entropy_vs_{v.upper()}_chr2")
-    stats.append(dict(panel=f"p2_entropy_vs_{v.upper()}_200kb_chr2", n=n, spearman=r, p=p))
+    stats.append(dict(panel=f"p2_entropy_vs_{v.upper()}_200kb_chr2", n=n, spearman=r, p=p, pearson=PEARSON[V_LABEL[v], n][0], pearson_p=PEARSON[V_LABEL[v], n][1]))
 
 # ---- panel 3: entropy vs Eig1 (200 kb and 1 Mb)
 fig, ax = plt.subplots(figsize=(6.2, 5)); r, p, n = scatter(ax, d, "E1_200kb", "Eig1 (200 kb)", s=6, loc="ll", xl=(-1.5, 1.2)); legend(ax)

@@ -25,11 +25,12 @@ save_table(t.reset_index().rename(columns={"index": "start"}).assign(chr=CHR)[
      "droplet_sd", "sd", "iqr"]], "Fig2b_chr11_1Mb.tsv")
 
 MEAN_C, VAR_C = "tab:blue", "tab:red"
+# Mean / cis tracks are drawn with a flipped y axis (large values at the bottom; 2026-11-13)
 TRACKS = [("E1_1mb", "Bulk Eig1", "Eig1", "black", None),
-          ("bulk_cis_total", "Bulk cis/total ratio", "cis/total", "dimgray", None),
-          ("plate_mean", "Plate-based Mean(cisratio)", "Mean", MEAN_C, (0.6, 0.85)),
-          ("droplet_mean", "Droplet Mean(cisratio)", "Mean", MEAN_C, (0.6, 0.85)),       # droplet: 0.3 kb filter
-          ("mean", f"Model Mean(dist to CT{CT_UNIT})", "Mean", MEAN_C, None),
+          ("bulk_cis_total", "Bulk cis/total ratio", "cis/total", "dimgray", "flip"),
+          ("plate_mean", "Plate-based Mean(cisratio)", "Mean", MEAN_C, (0.85, 0.6)),
+          ("droplet_mean", "Droplet Mean(cisratio)", "Mean", MEAN_C, (0.85, 0.6)),       # droplet: 0.3 kb filter
+          ("mean", f"Model Mean(dist to CT{CT_UNIT})", "Mean", MEAN_C, "flip"),
           ("plate_sd", "Plate-based SD(cisratio)", "SD", VAR_C, None),
           ("droplet_sd", "Droplet SD(cisratio)", "SD", VAR_C, None),
           ("sd", f"Model SD(dist to CT{CT_UNIT})", "SD", VAR_C, None)]                                 # IQR track removed (SD only, 2026-11)

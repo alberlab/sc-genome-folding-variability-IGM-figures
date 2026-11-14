@@ -48,7 +48,7 @@ def draw_column(axes, t, ylabels=True):
             ax.plot(s.start + offset[ch], s[col], lw=LW, color=color)
         ax.axhline(yref[col], ls="--", lw=1.0, color="gray")
         ax.axvline(len_a, ls="-", lw=1.0, color="black")   # chr2 | chr11 junction (solid)
-        ax.set_ylim(*ylim[col])
+        ax.set_ylim(*(ylim[col][::-1] if col == "mean" else ylim[col]))   # Mean flipped: large values at the bottom (2026-11-13)
         if ylabels:
             ax.set_ylabel(ylab, fontsize=FS)
         ax.tick_params(labelsize=FS - 1)

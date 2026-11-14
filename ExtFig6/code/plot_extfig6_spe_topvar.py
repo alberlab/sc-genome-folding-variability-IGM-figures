@@ -9,7 +9,7 @@ with cisratio CV replaced by SD / IQR(dist to CT) and the occ0.6 models.
   (B) % of top-10 % regions that are spe-dominant         = n_spe_top / n_top; random expectation = the stage's
       fraction of spe-dominant bins (grey dashed segment on each bar)
 Locale = ENV v2.
-Outputs: output/figures/ExtFig6b_top10_SDdistCT_fraction_spe_dominant.* (B, manuscript), ExtFig6b_alt_spe_in_top10_SDdistCT.* (A),
+Outputs: output/figures/ExtFig6b_top10_SDdistCT_fraction_spe_dominant.* (B, manuscript; the (A) bar was dropped 2026-11-13),
          output/source_data/ExtFig6b_spe_top10.tsv
 """
 import numpy as np, pandas as pd, matplotlib.pyplot as plt
@@ -52,8 +52,7 @@ def bar(t, col, ylabel, title, name, expected):
 
 for v in ("sd",):                                                       # SD only (2026-11)
     t = T[T.metric == V_LABEL[v]]
-    bar(t, "pct_spe_in_top", f"% of spe-dominant regions\nin top 10% {V_LABEL[v]}",
-        f"spe-dominant regions: fraction in top 10% {V_LABEL[v]}", f"ExtFig6b_alt_spe_in_top10_{v.upper()}distCT", 100 * TOP)
+    # (A) bar ExtFig6b_alt_spe_in_top10_SDdistCT dropped as redundant (2026-11-13); its numbers stay in the source-data table
     bar(t, "pct_top_is_spe", f"% of top 10% {V_LABEL[v]} regions\nthat are spe-dominant",
         f"top 10% {V_LABEL[v]} regions: fraction spe-dominant", f"ExtFig6b_top10_{v.upper()}distCT_fraction_spe_dominant",
         t.pct_spe_all.to_numpy())

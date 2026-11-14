@@ -111,7 +111,7 @@ reference minus the IQR rows; **new** = new script / layout (checked against the
 | Fig3e | IGM row: Mean(dist to CT) vs own-stage Eig1, chr2, colour SD (1 x 4; the PDF adds the blank iHLC column) | `plot_fig3e.py` | `Fig3e_IGM_Mean_vs_Eig1_chr2_colorbySD` | PK Fig3 | =ref, stats subset |
 | Fig4a / 4e / 4i | ChimeraX: nuclear shape half view / chr11 CT / Shannon index | `chimerax/fig4_render_sessions.py` (`run_chimerax.sh`) | `Fig4a/`, `Fig4e/`, `Fig4i/` (PNG + .cxs; Fig4i also the envelope maps `*_nucleus_shell_pores.mrc`) | PK Fig4 renders, copied; cmm/pdb in `data/structures/*.tar.gz` | copied |
 | Fig4b | mean SD(dist to CT) per radial decile | `plot_fig4b.py` | `Fig4b_SDdistCT_vs_radial_decile` | PK Fig4 | =ref, shells subset |
-| Fig4f | chr11 CT volume ratio / compactness violins | `plot_fig4f.py` | `Fig4f_chr11_{CT_volume_ratio,compactness}` | PK Fig4 | =ref |
+| Fig4f | chr11 CT volume ratio / compactness (packing density) violins | `plot_fig4f.py` | `Fig4f_chr11_{CT_volume_ratio,compactness}` | PK Fig4 | =ref |
 | Fig4j | mean Shannon index per radial decile | `plot_fig4j.py` | `Fig4j_Shannon_vs_radial_decile` | PK Fig4 | =ref |
 | Fig5a | ChimeraX half-sphere, SD(dist to CT) + speckle centroids | `chimerax/fig5ab_*.py` (`run_chimerax.sh SD`); colour bar `plot_fig5ab_colorbars.py` | `Fig5a/` | PK Fig5 SD renders (= V2 FINAL, md5-identical) | copied; colour bar =ref |
 | Fig5b | ChimeraX half-sphere, locale entropy (v2) | `chimerax/fig5ab_*.py` (`run_chimerax.sh entropy`) | `Fig5b/` | V2 FINAL `Fig5b_renders` | copied; colour bar =ref |
@@ -126,7 +126,7 @@ reference minus the IQR rows; **new** = new script / layout (checked against the
 | ExtFig2e | ES chr11 / chr20 entropy vs SD | `plot_extfig2e.py` (data `../Fig5/data`) | `ExtFig2e_ES_entropy_vs_SDdistCT_chr11_chr20` | `plot_new_panels.py` (old name ExtFig2d); ref V2 | =ref |
 | ExtFig2h | model chr2 3 loci inside/outside bars + histogram | `plot_extfig2h.py` | `ExtFig2h_chr2_3loci_bar_hist` | PK ExtFig2 `plot_extfig2e.py` (old name 2e) | =ref |
 | ExtFig4d | IGM row: chr11 5 loci, Mean & SD(dist to CT) across stages | `plot_extfig4.py` | `ExtFig4d_IGM_chr11_5loci_Mean_SDdistCT` | PK ExtFig4 (SD figure) | =ref |
-| ExtFig5b | model chr2 CT volume ratio / compactness violins | `plot_extfig5b.py` | `ExtFig5b_chr2_{CT_volume_ratio,compactness}` | PK ExtFig5 | =ref |
+| ExtFig5b | model chr2 CT volume ratio / compactness (packing density) violins | `plot_extfig5b.py` | `ExtFig5b_chr2_{CT_volume_ratio,compactness}` | PK ExtFig5 | =ref |
 | ExtFig6a | top: SD(dist to CT) vs RAD; bottom: entropy vs RAD; 4 stages, colour = dominant locale | `plot_extfig6ab.py` | `ExtFig6a_{top_SDdistCT,bottom_entropy}_vs_RAD` | PK ExtFig6 + v2; ref V2 | =ref, stats subset |
 | ExtFig6b | % of top-10 % SD(dist to CT) bins that are spe-dominant | `plot_extfig6_spe_topvar.py` | `ExtFig6b_top10_SDdistCT_fraction_spe_dominant` (+ `_alt_`: % of spe bins in top 10 %) | PK ExtFig6 + v2; ref V2 | =ref, table subset |
 | ExtFig6c | entropy vs SD, all autosomes / chr20, 4 stages | `plot_extfig6c.py` (data `../Fig5/data`) | `ExtFig6c_entropy_vs_SDdistCT_merged_chr20` | `plot_new_panels.py` (ExtFig6c part); ref V2 | =ref |

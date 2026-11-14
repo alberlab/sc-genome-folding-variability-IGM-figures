@@ -3,7 +3,8 @@
 each chr2 copy: n = 2000 per stage). Same definitions and style as Fig. 4f (chr11), chr2 drawn in dark red.
   CT volume ratio  = convex-hull volume of the chr2 CT-core beads (top 30 % strict-cis beads at 2.5 r, the core used for
                      dist to CT) / nuclear volume (4/3 pi a b c of the model's ellipsoid)
-  Compactness      = bead radius / Rg, Rg = radius of gyration of all beads of that chr2 copy
+  Compactness      = packing density = total bead volume (n_beads x 4/3 pi r^3) / convex-hull volume of ALL beads of
+                     that copy (2026-11-13; replaces bead radius / Rg). Old definition: bead radius / Rg, Rg = radius of gyration of all beads of that chr2 copy
 Outputs: output/figures/ExtFig5b_chr2_{CT_volume_ratio,compactness}.*, output/source_data/ExtFig5b_summary.tsv
 """
 import numpy as np, pandas as pd, matplotlib.pyplot as plt
@@ -12,10 +13,15 @@ from extfig5_common import DATA, CELLS, CELL_TITLE, save, save_table
 COLOR = "darkred"
 V = pd.concat([pd.read_csv(DATA / f"{c}_occ06_chr2_ct_volfrac_compactness.tsv", sep="\t").assign(cell=c) for c in CELLS],
               ignore_index=True)
+H = pd.concat([pd.read_csv(DATA / f"{c}_occ06_chr2_allbead_hull.tsv", sep="\t").assign(cell=c) for c in CELLS],
+              ignore_index=True)
+V = V.merge(H[["cell", "structure", "copy", "allbead_hull_volume_nm3"]], on=["cell", "structure", "copy"], how="left",
+            validate="1:1")
+V["packing_density"] = V.n_beads * 4.0 / 3.0 * np.pi * V.bead_radius_nm ** 3 / V.allbead_hull_volume_nm3
 for c in CELLS:
     assert (V.cell == c).sum() == 2000, c
 rows = []
-for col, lab in (("ct_volume_fraction", "CT volume ratio"), ("compactness_r_over_rg", "Compactness")):
+for col, lab in (("ct_volume_fraction", "CT volume ratio"), ("packing_density", "Compactness (packing density)")):
     for c in CELLS:
         v = V.loc[V.cell == c, col].dropna().to_numpy()
         q1, q3 = np.percentile(v, [25, 75])
@@ -42,4 +48,4 @@ def violin(col, title, ylabel, name):
 
 
 violin("ct_volume_fraction", "CT volume ratio", "CT vol. / nuclei vol", "ExtFig5b_chr2_CT_volume_ratio")
-violin("compactness_r_over_rg", "Compactness score", "chr Rg$^{-1}$ (normalized)", "ExtFig5b_chr2_compactness")
+violin("packing_density", "Compactness score", "chromatin vol. / CT hull vol.", "ExtFig5b_chr2_compactness")
